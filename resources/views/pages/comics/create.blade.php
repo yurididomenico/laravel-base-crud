@@ -7,20 +7,44 @@
 @section('main-content')
     <h1 class="text-center">Nuovo Prodotto</h1>
 
-    <form>
+    <form method="" Action="">
         <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            <label class="form-label">Titolo</label>
+            <input name="title" type="text" class="form-control" id="title">
         </div>
+
         <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1">
+            <label class="form-label">Descrizione</label>
+            <textarea name="description" class="form-control" id="title"></textarea>
         </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+        <div class="mb-3">
+            <label class="form-label">Immagine</label>
+            <input name="thumb" type="text" class="form-control" id="title">
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div class="mb-3">
+            <label class="form-label">Prezzo</label>
+            <input name="price" type="text" class="form-control" id="title">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Serie</label>
+            <input name="series" type="text" class="form-control" id="title">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Data</label>
+            <input name="sale_date" type="date" class="form-control" id="title">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Tipo</label>
+            <input name="type" type="text" class="form-control" id="title">
+        </div>
+
+
+
+        <button type="submit" class="btn btn-primary">Crea Prodotto</button>
     </form>
 @endsection

@@ -21,7 +21,7 @@ class ComicsController extends Controller
             'comics' => $comics
         ];
 
-        dd($data);
+        // dd($data);
 
         return view('pages.comics.index', $data);
     }

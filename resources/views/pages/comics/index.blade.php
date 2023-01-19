@@ -5,6 +5,11 @@
 @section('main-content')
     <h1>Pagina Comics</h1>
     {{-- Tutti i record della tabella comics --}}
+    <button type="button" class="btn btn-primary">
+        <a href="{{route('comics.create')}}" class="text-white text-decoration-none">+</a>
+    </button>
+
+
 
     <table class="table">
         <thead>

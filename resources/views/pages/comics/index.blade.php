@@ -35,4 +35,6 @@
         </tbody>
     </table>
 
+    {{ $comics->links() }}
+
 @endsection

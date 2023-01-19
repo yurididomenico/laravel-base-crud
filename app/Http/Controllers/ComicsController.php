@@ -14,7 +14,9 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        $comics = Comic::All();
+        // $comics = Comic::All();
+        $comics = Comic::paginate(4);
+
 
         $data =
         [

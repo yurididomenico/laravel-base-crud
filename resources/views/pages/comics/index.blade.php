@@ -23,7 +23,11 @@
             @foreach ($comics as $elem)
                 <tr>
                     <td>{{$elem->id}}</td>
-                    <td>{{$elem->title}}</td>
+                    <td>
+                        <a href="{{route('comics.show', $elem->id)}}">
+                            {{$elem->title}}
+                        </a>
+                    </td>
                     <td>{{$elem->description}}</td>
                     <td>{{$elem->thumb}}</td>
                     <td>{{$elem->price}}</td>

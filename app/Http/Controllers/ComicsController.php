@@ -57,7 +57,12 @@ class ComicsController extends Controller
      */
     public function show($id)
     {
-        //
+        $singolo_elem = Comic::where('id', '=', $id);
+        $data =
+        [
+            'comic' => $singolo_elem
+        ];
+        // dd($data);
     }
 
     /**

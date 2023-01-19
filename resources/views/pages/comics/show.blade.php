@@ -4,6 +4,7 @@
 
 @section('main-content')
 
-    <h1>Singolo Fumetto</h1>
+    <h1>{{$singolo_elem->title}}</h1>
+
 
 @endsection

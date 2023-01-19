@@ -1,10 +1,16 @@
 @extends('layouts.app')
 
-@section('page-title', 'Comics')
+@section('title-page')
+    Comics | {{$singolo_elem->title}}
+@endsection
 
 @section('main-content')
 
-    <h1>{{$singolo_elem->title}}</h1>
+    <h1 class="text-center">{{$singolo_elem->title}}</h1>
 
-
+    <div>
+        <p>
+            {{$singolo_elem->description}}
+        </p>
+    </div>
 @endsection

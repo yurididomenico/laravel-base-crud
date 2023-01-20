@@ -4,6 +4,14 @@
 
 @section('main-content')
     <h1>Pagina Comics</h1>
+
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+    @endif
+
+
     {{-- Tutti i record della tabella comics --}}
     <button type="button" class="btn btn-primary">
         <a href="{{route('comics.create')}}" class="text-white text-decoration-none">+</a>
@@ -46,6 +54,7 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-xmark p-1 fs-3"></i></button>
                         </form>
+                        <div><a href="{{route('comics.edit', $elem->id)}}"><i class="fa-solid fa-pen p-2"></i></a></div>
                     </td>
                 </tr>
             @endforeach

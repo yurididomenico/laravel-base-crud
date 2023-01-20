@@ -7,7 +7,10 @@
 @section('main-content')
     <h1 class="text-center">Nuovo Prodotto</h1>
 
-    <form method="" Action="">
+    <form method="POST" Action="{{ route('comics.store') }}">
+
+        @csrf
+
         <div class="mb-3">
             <label class="form-label">Titolo</label>
             <input name="title" type="text" class="form-control" id="title">

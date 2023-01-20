@@ -22,6 +22,7 @@
                 <th scope="col">Serie</th>
                 <th scope="col">Data</th>
                 <th scope="col">Tipo</th>
+                <th scope="col">Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -39,6 +40,13 @@
                     <td>{{$elem->series}}</td>
                     <td>{{$elem->sale_date}}</td>
                     <td>{{$elem->type}}</td>
+                    <td>
+                        <form action="{{ route('comics.destroy', $elem->id) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-outline-danger"><i class="fa-solid fa-xmark p-1 fs-3"></i></button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
